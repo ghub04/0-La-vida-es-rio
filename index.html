@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Vida es Rio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- cover -->
+     <svg>
+        <filter id="wavy">
+            <feTurbulence type="turbulence" basefrequency="0.005" numOctaves="4">
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="50">
+            </feDisplacementMap>
+        </filter>
+    </svg>
+    <h1 class="title">la vida es rio</h1>
+
+<!--script-->
+<!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- split text -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <!-- main js -->
+    <script type="module" src="js/main.js"></script>
+    
+</body>
+</html>
