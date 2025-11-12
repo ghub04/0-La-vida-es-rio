@@ -11,7 +11,8 @@ El objetivo principal es crear una experiencia web inmersiva y poética que perm
 El proyecto está organizado en módulos para facilitar la escalabilidad y el mantenimiento del código:
 
 ```
-/assets        → imágenes y archivos multimedia  
+/assets        → imágenes y archivos multimedia
+/fonts         → fuentes del proyecto
 /css           → hojas de estilo principales y parciales  
 /js            → scripts organizados por funcionalidad  
 /index.html    → punto de entrada principal  
