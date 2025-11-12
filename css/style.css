@@ -1,37 +1,74 @@
-body{
-    background-color: #f3e7d0;
-}
- 
-h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 4rem;
-    text-align: center;
-    text-transform: uppercase;
-    filter: url(#wavy);
+@import url(normalize.css);
+@import url(utilities.css);
+
+*{
+  text-wrap: pretty;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
 }
 
-.container{
-    width: 100%;
-    height: 100svh;
-    /* background-color: red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.filter {
+    position: absolute;
 }
 
 .cover {
-    /* background-color: red; */
-    width: 100%;
-    height: 100svh;
-
+    background-color: var(--sand);
+    
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-
     position: absolute;
+    z-index: 20;
 
-svg {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100svh;
 }
+
+h1 {
+
+    font-family: var(--sans-serif);
+    font-weight: 700;
+    color: var(--black);
+    font-size: clamp(4rem, 2vw, 6rem);
+    text-align: center;
+    text-transform: uppercase;
+
+    filter: url(#wavy);
+
+    /* background-color: red; */
+}
+
+
+
+
+/* loader */
+.loader {
+  position: absolute;
+  bottom: 30%;
+  z-index: 15;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+
+  transition: opacity 0.5s ease;
+
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: var(--black);
+}
+
+.progress-bar {
+  width: 200px;
+  height: 10px;
+  background: var(--turquoise);
+  /* border-radius: 10px; */
+  overflow: hidden;
 }

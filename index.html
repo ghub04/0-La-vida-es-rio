@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- loading bar -->
+    <div class="cover">
+     <div class="loader">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+     </div>
     <!-- cover -->
-     <svg>
+    <svg class="filter">
         <filter id="wavy">
             <feTurbulence type="turbulence" basefrequency="0.005" numOctaves="4">
             </feTurbulence>
@@ -16,12 +23,13 @@
             </feDisplacementMap>
         </filter>
     </svg>
-    <h1 class="title">la vida es rio</h1>
+        <h1 class="title">la vida es rio</h1>
+    </div>
 
 <!--script-->
 <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <!-- split text -->
+  <!-- split text -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
   <!-- main js -->
     <script type="module" src="js/main.js"></script>

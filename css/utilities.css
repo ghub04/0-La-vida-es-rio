@@ -1,0 +1,12 @@
+@import url(fonts.css);
+
+/* utilities */
+:root {
+    --sand: #f3e7d0;
+    --golden: #d1b17b;
+    --turquoise: #80c9cf;
+    --grey: #6b7b8c;
+    --black: #1e1e1e;  
+    
+    --sans-serif: 'quicksand', Arial, sans-serif;
+}
