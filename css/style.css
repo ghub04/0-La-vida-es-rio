@@ -13,6 +13,11 @@
     position: absolute;
 }
 
+#islands-map-wrapper{
+  width: 50%;
+  height: 50%;
+}
+
 .cover {
     background-color: var(--sand);
     
@@ -68,4 +73,14 @@ h1 {
   background: var(--turquoise);
   /* border-radius: 10px; */
   overflow: hidden;
+}
+
+/* islands */
+.island-item:hover{
+    cursor: pointer;
+}
+
+#islands-map-wrapper{
+    width: 100%;
+    height: 100%;
 }
