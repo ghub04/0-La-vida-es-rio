@@ -3,6 +3,7 @@ gsap.registerPlugin(SplitText)
 
 const loader = document.querySelector('.loader');
 const progress = document.querySelector('.progress');
+const cover = document.querySelector('.cover')
 
 export function textAnimation() {
 
@@ -25,6 +26,12 @@ export function textAnimation() {
 
 // loader starts
 export function loadingBar() {
+    function hideCover() {
+        gsap.to(cover, {
+            autoAlpha: 0,
+            duration: 2
+        })
+    }
     let load = 0;
     const loadingInterval = setInterval(() => {
         // barra de progreso
@@ -38,8 +45,7 @@ export function loadingBar() {
             gsap.to(loader, {
                 autoAlpha: 0,
                 duration: 0.5,
-
-
+                // onComplete: () => hideCover()
             });
 
         }
