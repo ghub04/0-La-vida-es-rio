@@ -1,0 +1,38 @@
+.quote-wrapper {
+  position: fixed;
+  flex-direction: column;
+  z-index: 50;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  width: 100%;
+  height: 100svh;
+  background-color: var(--turquoise);
+}
+
+.quote-wrapper.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.quote-container {
+  margin: 1.5rem;
+}
+
+.quote-text {
+  font-family: var(--sans-serif);
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.close {
+  background-color: red;
+  font-family: var(--sans-serif);
+  text-decoration: underline;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

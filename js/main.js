@@ -3,8 +3,6 @@ import { quoteLoad } from '/js/quoteLoad.js';
 import '/js/timelineCover.js'
 
 document.addEventListener("DOMContentLoaded", () => {
-    // textAnimation()
-    // loadingBar()
     customCursor()
     quoteLoad()
 

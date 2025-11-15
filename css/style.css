@@ -1,67 +1,69 @@
-@import url(normalize.css);
+/* @import url(normalize.css); */
 @import url(utilities.css);
 @import url(cursor.css);
+@import url(modal.css);
 
-*{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
   text-wrap: pretty;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   overscroll-behavior: none;
+  backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
 }
 
 .filter {
-    top: 0;
-    left: 0;
-    position: absolute;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
 }
 
 .cover {
-    background-color: var(--sand);
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 20;
+  /* visibility: hidden; */
+  width: 100%;
+  height: 100svh;
+  text-align: center;
 
-    width: 100%;
-    height: 100svh;
+  flex-direction: column;
+
+  position: absolute;
+  z-index: 20;
+
+  background-color: var(--sand);
 }
 
-.cover-info{
+.cover-info {
   font-family: var(--sans-serif);
-  text-align: center;
   font-size: 1rem;
   font-weight: 300;
   /* background-color: red; */
 }
 
 .title {
+  font-family: var(--sans-serif);
+  font-weight: 700;
+  color: var(--black);
+  font-size: clamp(4rem, 10vw, 10rem);
+  text-align: center;
+  text-transform: uppercase;
 
-    font-family: var(--sans-serif);
-    font-weight: 700;
-    color: var(--black);
-    font-size: clamp(4rem, 2vw, 6rem);
-    text-align: center;
-    text-transform: uppercase;
+  filter: url(#wavy);
 
-    filter: url(#wavy);
-
-    /* background-color: red; */
+  /* background-color: red; */
 }
-
 
 /* loader */
 .loader {
-background: var(--turquoise);
-position: absolute;
-width: 100%;
-height: 2px;
+  background: var(--turquoise);
+  position: absolute;
+  width: 100%;
+  height: 2px;
 
-top:50%;
-z-index: 25;
+  top: 50%;
+  z-index: 25;
 }
 
 /* islands */
@@ -69,32 +71,34 @@ z-index: 25;
   cursor: pointer;
 }
 
-#map {
+.map-container {
+  width: 100%;
+  height: 100svh;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100svh;
+  object-fit: cover;
+  object-position: center;
+  /* filter: url(#erode); */
+}
+
+.islands-wrapper-map {
+  width: 100%;
+  height: 100svh;
   position: absolute;
-  z-index: 10;
+  z-index: 30;
+}
+
+#map {
   width: 100%;
   height: auto;
-  margin: 0 auto;
-  fill: var(--sand);
+  fill: var(--golden);
 }
 
-/* quotes */
-.quote-container{
-  font-family: var(--sans-serif);
-  font-weight: 300;
-  font-size: 2rem;
-}
-
-.canvas{
-  width: 100%;
-  height: 100%;
-  top: 0;
-  position: absolute;
-  z-index: 1;
-  img{
-    filter: url(#erode);
-    object-fit: cover;
-
-
-  }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
