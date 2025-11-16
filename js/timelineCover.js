@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("init timeline cover");
+  // console.log("init timeline cover");
 
-  const msg = document.querySelectorAll(".cover-info p");
   const cover = document.querySelector(".cover");
+  const msg = document.querySelector("#info-1");
+  const closeCover = document.querySelector("#info-2");
 
   let tlCover = gsap.timeline();
   let split;
 
+  // animacion la vida es rio
   function textAnimation() {
     document.fonts.ready.then(() => {
       split = SplitText.create(".title", {
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // loading-bar
   tlCover
     .fromTo(
       ".loader",
@@ -43,35 +46,50 @@ document.addEventListener("DOMContentLoaded", () => {
     .add(textAnimation())
     .add(coverInfo());
 
+  // mensaje mientras carga
   gsap.set(msg, {
+    y: -90,
     autoAlpha: 0,
-    y: 10,
+  });
+
+  gsap.set(closeCover, {
+    y: 0,
+    autoAlpha: 0,
   });
 
   function coverInfo() {
     let tlCoverInfo = gsap.timeline();
-
-    msg.forEach((p, i) => {
-      tlCoverInfo.to(p, {
-        // paused: true,
+    tlCoverInfo
+      .to(msg, {
+        y: -100,
         autoAlpha: 1,
-        y: 0,
         duration: 1,
-        ease: "power2.out",
-        onComplete: () => {
-          hideCover();
-        },
+        delay: 3,
+      })
+      .to(msg, {
+        autoAlpha: 0,
+        duration: 1,
+        delay: 2,
+      })
+      .to(closeCover, {
+        autoAlpha: 1,
+        duration: 1,
+        delay: 1.5,
       });
-    });
-    return tlCoverInfo;
   }
+  coverInfo();
 
+  // ocultar cover una vez completada la carga
   function hideCover() {
     gsap.to(cover, {
       autoAlpha: 0,
-      duration: 2,
+      duration: 0.5,
     });
   }
 
+  closeCover.addEventListener("click", () => {
+    console.log("close");
+    hideCover();
+  });
   // gsap ends
 });
