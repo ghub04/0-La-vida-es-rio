@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // console.log("init timeline cover");
+  gsap.registerPlugin(SplitText);
 
   const cover = document.querySelector(".cover");
   const msg = document.querySelector("#info-1");
@@ -88,8 +89,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   closeCover.addEventListener("click", () => {
-    console.log("close");
+    // console.log("close");
     hideCover();
   });
+
+  // movimiento del mar
+  let oceanMove = gsap.timeline();
+  oceanMove.to("#erode feMorphology", {
+    attr: { radius: 5 },
+    duration: 2,
+    yoyo: true,
+    repeat: -1,
+    ease: "sine.inOut",
+  });
+
   // gsap ends
 });

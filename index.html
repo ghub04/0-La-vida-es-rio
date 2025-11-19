@@ -45,7 +45,11 @@
         <img src="/assets/ocean.avif" alt="" />
       </div>
 
-      <div class="islands-wrapper-map">
+      <div class="islands-wrapper-map container">
+        <div class="map-info">
+          <p>Navega las islas.</p>
+          <p>Haz click para interactuar.</p>
+        </div>
         <?xml version="1.0" encoding="UTF-8"?>
         <svg
           id="map"
@@ -109,10 +113,10 @@
     <svg class="filter">
       <filter
         id="erode"
-        x="-10%"
-        y="-10%"
-        width="120%"
-        height="120%"
+        x="10%"
+        y="10%"
+        width="100%"
+        height="100%"
         filterUnits="objectBoundingBox"
       >
         <feMorphology operator="erode" radius="4" />

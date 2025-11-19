@@ -1,5 +1,6 @@
 .cursor {
-  --size:20px;
+  display: none;
+  --size: 20px;
   position: fixed;
   top: -10px;
   left: -10px;

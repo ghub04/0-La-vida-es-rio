@@ -3,6 +3,8 @@ const container = document.querySelector(".quote-container");
 const closeBtn = document.querySelector(".close");
 const popUp = document.querySelector(".quote-wrapper");
 
+gsap.registerPlugin(SplitText);
+
 export function quoteLoad() {
   fetch("/js/quotes.json")
     .then((response) => response.json())
@@ -13,20 +15,19 @@ export function quoteLoad() {
         island.addEventListener("click", () => {
           const id = Number(island.dataset.id);
           const quote = quotes.find((q) => q.id === id);
-          console.log(id);
+          // console.log(id);
 
           if (quote) {
-            container.innerHTML = `<p class='quote-text'>"${quote.text}"</p>`;
+            container.innerHTML = `<p class='quote-text'>${quote.text}</p>`;
             container.classList.add("active");
             openQuote();
-            // popUp.classList.add("active");
-
-            closeBtn.addEventListener("click", () => {
-              // popUp.classList.remove("active");
-              closeQuote();
-            });
           }
         });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        // popUp.classList.remove("active");
+        closeQuote();
       });
     })
     .catch((err) => console.error("Error cargando citas:", err));
