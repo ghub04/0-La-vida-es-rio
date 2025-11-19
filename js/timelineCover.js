@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cover = document.querySelector(".cover");
   const msg = document.querySelector("#info-1");
   const closeCover = document.querySelector("#info-2");
+  const mapInfo = document.querySelectorAll(".map-info p");
 
   let tlCover = gsap.timeline();
   let split;
@@ -31,9 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
           {
             attr: { baseFrequency: "0.006" },
             duration: 8,
-            stagger: 0.05,
+            stagger: 0.5,
             repeat: -1,
             yoyo: true,
+            // ease: "power2.inOut",
           },
           "-=1"
         );
@@ -104,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
   closeCover.addEventListener("click", () => {
     // console.log("close");
     hideCover();
+    mapText();
   });
 
   // movimiento del mar
@@ -115,6 +118,24 @@ document.addEventListener("DOMContentLoaded", () => {
     repeat: -1,
     ease: "sine.inOut",
   });
+
+  // map info animation
+  gsap.set(mapInfo, {
+    y: 10,
+    autoAlpha: 0,
+  });
+
+  function mapText() {
+    mapInfo.forEach((p, i) => {
+      gsap.to(p, {
+        y: 0,
+        autoAlpha: 1,
+        duration: 0.6,
+        ease: "power2.out",
+        delay: i * 1.2,
+      });
+    });
+  }
 
   // gsap ends
 });

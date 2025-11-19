@@ -2,8 +2,7 @@ const islands = document.querySelectorAll(".island-item");
 const container = document.querySelector(".quote-container");
 const closeBtn = document.querySelector(".close");
 const popUp = document.querySelector(".quote-wrapper");
-
-gsap.registerPlugin(SplitText);
+const mapInfo = document.querySelectorAll(".map-info p");
 
 export function quoteLoad() {
   fetch("/js/quotes.json")
@@ -66,4 +65,22 @@ function closeQuote() {
         popUp.style.pointerEvents = "none";
       },
     });
+}
+
+// map info animation
+gsap.set(mapInfo, {
+  y: 0,
+  autoAlpha: 0,
+});
+
+function mapText() {
+  mapInfo.forEach((p, i) => {
+    gsap.to(p, {
+      y: 0,
+      autoAlpha: 1,
+      duration: 0.6,
+      ease: "power2.out",
+      delay: i * 0.1,
+    });
+  });
 }
