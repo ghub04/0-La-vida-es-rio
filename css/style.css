@@ -115,8 +115,8 @@
 
 #map {
   width: 100%;
-  height: auto;
-  position: relative;
+  height: 100svh;
+  position: absolute;
   top: 5%;
   transform: scale(2);
   fill: var(--golden);

@@ -31,11 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
           "#wavy feTurbulence",
           {
             attr: { baseFrequency: "0.006" },
-            duration: 8,
+            duration: 20,
             stagger: 0.5,
             repeat: -1,
             yoyo: true,
-            // ease: "power2.inOut",
           },
           "-=1"
         );

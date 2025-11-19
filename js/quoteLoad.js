@@ -66,21 +66,3 @@ function closeQuote() {
       },
     });
 }
-
-// map info animation
-gsap.set(mapInfo, {
-  y: 0,
-  autoAlpha: 0,
-});
-
-function mapText() {
-  mapInfo.forEach((p, i) => {
-    gsap.to(p, {
-      y: 0,
-      autoAlpha: 1,
-      duration: 0.6,
-      ease: "power2.out",
-      delay: i * 0.1,
-    });
-  });
-}
