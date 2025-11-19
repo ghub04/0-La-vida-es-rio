@@ -15,15 +15,28 @@ document.addEventListener("DOMContentLoaded", () => {
       split = SplitText.create(".title", {
         type: "words",
       });
+      let textAnimation = gsap.timeline();
 
-      gsap.from(split.words, {
-        y: 100,
-        autoAlpha: 0,
-        stagger: 0.05,
-        duration: 3,
-        delay: 6,
-        ease: "power2.out",
-      });
+      textAnimation
+        .from(split.words, {
+          y: 100,
+          autoAlpha: 0,
+          stagger: 0.05,
+          duration: 3,
+          delay: 6,
+          ease: "power2.out",
+        })
+        .to(
+          "#wavy feTurbulence",
+          {
+            attr: { baseFrequency: "0.006" },
+            duration: 8,
+            stagger: 0.05,
+            repeat: -1,
+            yoyo: true,
+          },
+          "-=1"
+        );
     });
   }
 
