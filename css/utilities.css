@@ -10,4 +10,6 @@
 
   --sans-serif: "quicksand", Arial, sans-serif;
   --serif: "instrument", "Times New Roman", Times, serif;
+
+  --gradient: radial-gradient(var(--sand), var(--golden));
 }

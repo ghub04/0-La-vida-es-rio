@@ -31,8 +31,8 @@
     <!-- cover ends -->
 
     <!-- quotes starts -->
-    <div class="overlay"></div>
     <section class="quote-wrapper container">
+      <div class="overlay"></div>
       <div class="quote-container"></div>
       <div class="close"><p>Seguir explorando</p></div>
     </section>
@@ -142,6 +142,21 @@
           result="noise"
         ></feTurbulence>
         <feDiffuseLighting lighting-color="#80c9cf" surfaceScale="2">
+          <feDistantLight azimuth="45" elevation="60" />
+        </feDiffuseLighting>
+      </filter>
+    </svg>
+
+    <svg>
+      <filter id="roughpaper">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.04"
+          result="noise"
+          numOctaves="5"
+        />
+
+        <feDiffuseLighting in="noise" lighting-color="#d1b17b" surfaceScale="2">
           <feDistantLight azimuth="45" elevation="60" />
         </feDiffuseLighting>
       </filter>

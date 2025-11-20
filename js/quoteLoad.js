@@ -72,17 +72,13 @@ function closeQuote() {
     });
 }
 
-gsap.set(closeBtn, {
-  autoAlpha: 0,
-  y: 10,
-});
-
+// aparece el boton seguir explorando
 function close() {
   gsap.to(closeBtn, {
     autoAlpha: 1,
     y: 0,
     duration: 1,
-    delay: 1,
+    delay: 0.5,
   });
 }
 

@@ -8,17 +8,16 @@
 
   width: 100%;
   height: 100svh;
-  background: radial-gradient(var(--sand), var(--golden));
+  background: var(--gradient);
+  /* filter: url(#roughpaper); */
 }
 
-/* .overlay {
+.overlay {
   width: 100%;
   height: 100svh;
-  background: radial-gradient(var(--sand), var(--golden));
   position: absolute;
-  z-index: 40;
-  filter: url(#wavy);
-} */
+  filter: url(#roughpaper);
+}
 
 .quote-wrapper.active {
   pointer-events: auto;
