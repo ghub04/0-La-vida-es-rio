@@ -11,6 +11,15 @@
   background: radial-gradient(var(--sand), var(--golden));
 }
 
+/* .overlay {
+  width: 100%;
+  height: 100svh;
+  background: radial-gradient(var(--sand), var(--golden));
+  position: absolute;
+  z-index: 40;
+  filter: url(#wavy);
+} */
+
 .quote-wrapper.active {
   pointer-events: auto;
   opacity: 1;

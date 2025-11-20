@@ -20,6 +20,7 @@ export function quoteLoad() {
             container.innerHTML = `<p class='quote-text'>${quote.text}</p>`;
             container.classList.add("active");
             openQuote();
+            splitQuote();
           }
         });
       });
@@ -65,4 +66,19 @@ function closeQuote() {
         popUp.style.pointerEvents = "none";
       },
     });
+}
+
+function splitQuote() {
+  let splitQuote = SplitText.create(".quote-text", {
+    type: "words",
+  });
+
+  gsap.set(splitQuote.words, {
+    autoAlpha: "30%",
+  });
+  gsap.to(splitQuote.words, {
+    autoAlpha: 1,
+    duration: 2,
+    stagger: 0.05,
+  });
 }
