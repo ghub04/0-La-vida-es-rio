@@ -20,6 +20,33 @@
   -webkit-filter: url(#noise);
 }
 
+.map-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100svh;
+  opacity: 0.2;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #e5e5f7 20%,
+      #e5e5f7 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #e5e5f7 20%,
+        #e5e5f7 80%,
+        transparent 80%,
+        transparent
+      )
+      25px 25px,
+    linear-gradient(#444cf7 2px, transparent 2px) 0 -1px,
+    linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+  background-size: 100px 100px, 50px 50px, 25px 25px, 25px 25px;
+}
+
 /* .img-container img {
   width: 100%;
   height: 100svh;
