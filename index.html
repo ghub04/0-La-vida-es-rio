@@ -43,7 +43,7 @@
     <!-- <div class="coords">Lat: 0.0000 | Lng: 0.0000</div> -->
     <div class="container">
       <div class="img-container">
-        <img src="/assets/ocean.avif" alt="" />
+        <!-- <img src="/assets/ocean.avif" alt="" /> -->
       </div>
       <div class="map-info">
         <p>Navega las islas.</p>
@@ -161,6 +161,20 @@
         </feDiffuseLighting>
       </filter>
     </svg>
+
+    <svg id="filter">
+      <filter id="noise">
+        <feTurbulence baseFrequency="0.60" xresult="colorNoise" />
+        <feColorMatrix
+          in="colorNoise"
+          type="matrix"
+          values=".33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 1 0"
+          result="monoNoise"
+        />
+        <feBlend in="SourceGraphic" in2="monoNoise" mode="soft-light" />
+      </filter>
+    </svg>
+
     <!-- filters ends -->
     <!--script-->
     <!-- gsap -->
