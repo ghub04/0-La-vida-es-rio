@@ -36,7 +36,7 @@
 
   <!-- quotes starts -->
   <section class="quote-wrapper container">
-    <div class="overlay"></div>
+    <div class="overlay lined-paper"></div>
     <div class="quote-container"></div>
     <div class="close">
       <p>Seguir explorando</p>
@@ -48,9 +48,7 @@
   <!-- <div class="map-container"> -->
   <!-- <div class="coords">Lat: 0.0000 | Lng: 0.0000</div> -->
   <div class="container">
-    <div class="img-container">
-      <!-- <img src="/assets/ocean.avif" alt="" /> -->
-    </div>
+    <div class="map-bg-container"></div>
     <div class="map-overlay"></div>
     <div class="map-info">
       <p>Navega las islas.</p>
@@ -128,7 +126,7 @@
 
   <svg class="filter">
     <filter id="roughpaper">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" result="noise" numOctaves="5" />
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" result="noise" numOctaves="5" />
 
       <feDiffuseLighting in="noise" lighting-color="#d1b17b" surfaceScale="2">
         <feDistantLight azimuth="45" elevation="60" />

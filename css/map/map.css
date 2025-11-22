@@ -13,7 +13,7 @@
   height: 100svh;
 }
 
-.img-container {
+.map-bg-container {
   overflow: hidden;
   background-color: var(--turquoise);
   width: 100%;

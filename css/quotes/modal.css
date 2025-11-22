@@ -1,22 +1,13 @@
 .quote-wrapper {
-  position: fixed;
-  flex-direction: column;
-  z-index: 50;
-  inset: 0;
-  opacity: 0;
-  pointer-events: none;
-
-  width: 100%;
-  height: 100svh;
-  background: var(--gradient);
-  /* filter: url(#roughpaper); */
-}
-
-.overlay {
-  width: 100%;
-  height: 100svh;
-  position: absolute;
-  filter: url(#roughpaper);
+width: 100%;
+height: 100svh;
+position: fixed;
+inset:0;
+z-index: 15;
+opacity: 0;
+flex-direction: column;
+pointer-events: none;
+background: var(--gradient);
 }
 
 .quote-wrapper.active {
@@ -24,7 +15,30 @@
   opacity: 1;
 }
 
+/* .overlay {
+position: absolute;
+z-index: 15;
+width: 100%;
+height: 100svh;
+filter: url(#roughpaper); 
+}  */
+
+.overlay.lined-paper{
+  position: absolute;
+  inset: 0;
+  
+background-image: 
+linear-gradient(var(--golden) .07em, transparent .07em);
+background-size: 100% 1.2em;
+opacity: 50%;
+pointer-events: none;
+}
+
+
 .quote-container {
+  width: 100%;
+  max-width: 600px;
+  height: 85svh;
   padding: 2rem;
 }
 
@@ -35,18 +49,11 @@
 }
 
 .close {
-  font-family: var(--sans-serif);
+  font-family: var(--type);
   text-decoration: underline;
   font-size: 1rem;
 
   &:hover {
     cursor: pointer;
   }
-}
-
-.highlight {
-  /* font-weight: 700; */
-  font-size: 2rem;
-  /* letter-spacing: 0.02em; */
-  /* display: inline-block; */
 }
