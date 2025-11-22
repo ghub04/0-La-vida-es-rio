@@ -30,7 +30,6 @@ export function quoteLoad() {
       });
 
       closeBtn.addEventListener("click", () => {
-        // popUp.classList.remove("active");
         closeQuote();
       });
     })
@@ -42,9 +41,13 @@ function openQuote() {
   popUp.style.pointerEvents = "auto";
   let tlOpenQuote = gsap.timeline();
 
+  gsap.set (popUp,{
+    y:50,
+  })
   tlOpenQuote
     .to(popUp, {
-      autoAlpha: 1,
+      y:30,
+      autoAlpha: .9,
       duration: 0.2,
     })
     .to(container, {
@@ -60,6 +63,7 @@ function closeQuote() {
 
   tlCloseQuote
     .to(popUp, {
+      y:50,
       autoAlpha: 0,
       duration: 0.2,
     })
@@ -76,7 +80,6 @@ function closeQuote() {
 function close() {
   gsap.to(closeBtn, {
     autoAlpha: 1,
-    y: 0,
     duration: 1,
     delay: 0.5,
   });
