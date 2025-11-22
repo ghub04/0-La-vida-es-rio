@@ -13,11 +13,6 @@
   overflow: hidden;
 }
 
-.quote-wrapper.active {
-  pointer-events: auto;
-  opacity: .5;
-}
-
 .overlay.lined-paper {
   border: 7px double var(--black);
   border-radius: inherit;
@@ -38,19 +33,6 @@
   inset: 0;
   z-index: 10;
 }
-
-/* .outline {
-  border: 7px double var(--black);
-  width: 100%;
-  height: 100svh;
-  top: 20%;
-  transform: translateY(-20%);
-  position: absolute;
-  border-radius: 1rem;
-  pointer-events: none;
-  z-index: 14;
-  opacity: .5;
-} */
 
 
 .quote-container {
