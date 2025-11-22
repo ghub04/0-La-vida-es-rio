@@ -1,6 +1,7 @@
 /* islands */
 .island-item {
-  filter: drop-shadow(0px 4px 6px var(--sand));
+  /* filter: drop-shadow(0px px 10px var(--sand)); */
+  filter: drop-shadow(0px 4px 0px var(--golden));
 }
 
 .island-item:hover {
@@ -70,7 +71,7 @@
   position: absolute;
   top: 5%;
   transform: scale(2);
-  fill: var(--golden);
+  fill: var(--sand);
 }
 
 .map-info {

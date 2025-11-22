@@ -40,7 +40,7 @@
 .cover-info {
   width: 100%;
   height: auto;
-  font-family: var(--sans-serif);
+  font-family: var(--type);
   font-size: 1rem;
   font-weight: 300;
   position: relative;

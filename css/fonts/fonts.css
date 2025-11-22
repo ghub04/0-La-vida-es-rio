@@ -13,3 +13,19 @@
   font-display: swap;
   font-style: normal;
 }
+
+/* @font-face {
+  font-family: 'typewriter';
+  src: url("../../fonts/Typewriter/Hand\ TypeWriter.woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'oceanside';
+  src: url("../../fonts/Oceanside/Oceanside\ Typewriter.woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
