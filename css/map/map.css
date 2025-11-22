@@ -77,8 +77,8 @@
 .map-info {
   position: fixed;
   top: 5%;
-  font-family: var(--sans-serif);
-  color: var(--sand);
+  font-family: var(--type);
+  color: var(--black);
   font-size: 1rem;
   padding: 5px;
   text-align: center;
