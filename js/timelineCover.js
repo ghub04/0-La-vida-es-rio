@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeCover = document.querySelector("#info-2");
   const mapInfo = document.querySelectorAll(".map-info p");
 
+  const audio = new Audio('../assets/forest-wind.mp3')
+  audio.loop = true
+  let isAudioOn = false
+
   let tlCover = gsap.timeline();
   let split;
 
@@ -60,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .add(textAnimation())
     .add(coverInfo());
-   
+
 
   // mensaje mientras carga
   gsap.set(msg, {
@@ -107,6 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // console.log("close");
     hideCover();
     mapText();
+
+    if (!isAudioOn) {
+      audio.play()
+      isAudioOn = true
+    }
   });
 
   // movimiento del mar
