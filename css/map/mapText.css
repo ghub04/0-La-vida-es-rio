@@ -1,9 +1,23 @@
 .label-water {
-    fill: var(--grey);
+    fill: var(--black);
     stroke: none;
-    font-family: var(--mono);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: var(--serif);
     letter-spacing: .2em;
     font-size: 1.5rem;
 
-    transform: translate(300px, -10px);
+}
+
+#w_1 {
+    transform: translate(400px, 10px) rotate(10deg);
+}
+
+#w_2 {
+    transform: translate(400px, 300px) rotate(-45deg);
+
+}
+
+#w_3 {
+    transform: translate(200px, 450px);
 }

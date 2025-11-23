@@ -1,5 +1,8 @@
 .quote-wrapper {
   position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
   width: 100%;
   height: 100svh;
@@ -42,18 +45,17 @@
 }
 
 .quote-text {
-  font-family: var(--serif);
+  font-family: var(--script);
   font-weight: 300;
   font-size: 1.5rem;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .close {
   z-index: 10;
-  position: absolute;
+  position: relative;
   margin: 2rem 0;
-  bottom: 15%;
-  font-family: var(--type);
+  font-family: var(--script);
   font-size: 1rem;
   padding: 20px;
   border-radius: 50%;

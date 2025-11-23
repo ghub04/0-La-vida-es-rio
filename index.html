@@ -11,9 +11,6 @@
 <body>
   <!-- cursor -->
   <div class="cursor"></div>
-  <div class="audio-btn">
-    <p>Audio ON</p>
-  </div>
   <!-- loading bar starts -->
   <div class="cover container">
     <div class="loader"></div>
@@ -38,7 +35,7 @@
   <!-- cover ends -->
 
   <!-- quotes starts -->
-  <section class="quote-wrapper container">
+  <section class="quote-wrapper">
     <div class="overlay lined-paper"></div>
     <div class="overlay paper"></div>
     <div class="quote-container"></div>
@@ -119,7 +116,9 @@
           <circle id="ubi_9" class="circle" r="8" />
 
           <!-- texto -->
-          <text class="label-water">Océano Atlántico</text>
+          <text id="w_1" class="label-water">Océano</text>
+          <text id="w_2" class="label-water">Mar</text>
+          <text id="w_3" class="label-water">Bahía</text>
 
         </g>
       </svg>
@@ -169,6 +168,15 @@
       <feBlend in="SourceGraphic" in2="monoNoise" mode="multiply" />
     </filter>
   </svg>
+
+  <footer class="footer">
+    <div class="audio-btn">
+      <p>About</p>
+    </div>
+    <div>
+      <p>Audio ON</p>
+    </div>
+  </footer>
 
   <!-- filters ends -->
   <!--script-->

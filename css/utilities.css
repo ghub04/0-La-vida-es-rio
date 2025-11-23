@@ -12,9 +12,9 @@
 
 
   --sans-serif: "quicksand", Arial, sans-serif;
-  --serif: "instrument", "Times New Roman", Times, serif;
-  --type: 'oceanside';
-  /* --mono: 'sansation'; */
+  --serif: "garamond", "Times New Roman", Times, serif;
+  --script: 'oceanside', monospace;
+  --mono: 'sansation', monospace;
 
   --gradient: radial-gradient(var(--sand), var(--golden));
 }
