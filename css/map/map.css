@@ -1,7 +1,7 @@
 /* islands */
 .island-item {
   /* filter: drop-shadow(0px px 10px var(--sand)); */
-  filter: drop-shadow(0px 4px 0px var(--golden));
+  /* filter: drop-shadow(0px 4px 0px var(--golden)); */
 }
 
 .island-item:hover {
@@ -15,10 +15,11 @@
 
 .map-bg-container {
   overflow: hidden;
-  background-color: var(--turquoise);
+  background-color: var(--deepBlue);
   width: 100%;
   height: 100svh;
   -webkit-filter: url(#noise);
+
 }
 
 .map-overlay {
@@ -26,23 +27,18 @@
   width: 100%;
   height: 100svh;
   opacity: 0.2;
-  background: radial-gradient(
-      circle,
+  background: radial-gradient(circle,
       transparent 20%,
       #e5e5f7 20%,
       #e5e5f7 80%,
       transparent 80%,
-      transparent
-    ),
-    radial-gradient(
-        circle,
-        transparent 20%,
-        #e5e5f7 20%,
-        #e5e5f7 80%,
-        transparent 80%,
-        transparent
-      )
-      25px 25px,
+      transparent),
+    radial-gradient(circle,
+      transparent 20%,
+      #e5e5f7 20%,
+      #e5e5f7 80%,
+      transparent 80%,
+      transparent) 25px 25px,
     linear-gradient(#444cf7 2px, transparent 2px) 0 -1px,
     linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
   background-size: 100px 100px, 50px 50px, 25px 25px, 25px 25px;
@@ -70,8 +66,9 @@
   height: 100svh;
   position: absolute;
   inset: 0;
-  /* transform: scale(2); */
-  fill: var(--sand);
+  transform: scale(2);
+  fill: var(--green);
+  filter: drop-shadow(0 0 5px var(--sand)) drop-shadow(0 0 10px var(--turquoise)) drop-shadow(0 0 15px var(--turquoise));
 }
 
 .map-info {

@@ -4,14 +4,17 @@
 :root {
   --sand: #f3e7d0;
   --golden: #d1b17b;
+  --green: #585f12;
   --turquoise: #80c9cf;
+  --deepBlue: #4e9590;
   --grey: #6b7b8c;
   --black: #1e1e1e;
+
 
   --sans-serif: "quicksand", Arial, sans-serif;
   --serif: "instrument", "Times New Roman", Times, serif;
   /* --typewriter: 'typewriter', monospace; */
-  --type:'oceanside', monospace;
+  --type: 'oceanside', monospace;
 
   --gradient: radial-gradient(var(--sand), var(--golden));
 }
