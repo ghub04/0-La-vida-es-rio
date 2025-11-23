@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .add(textAnimation())
     .add(coverInfo());
+   
 
   // mensaje mientras carga
   gsap.set(msg, {
