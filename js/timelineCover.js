@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mapInfo = document.querySelectorAll(".map-info p");
 
   const audio = new Audio('../assets/forest-wind.mp3')
+  const audioToggle = document.querySelector('.audio-btn')
   audio.loop = true
   let isAudioOn = false
 
@@ -145,6 +146,24 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+
+  // audio
+  audioToggle.addEventListener('click', () => {
+    if (isAudioOn) {
+      audio.pause()
+      isAudioOn = false
+    } else {
+      audio.play()
+      isAudioOn = true
+    }
+    updateAudioBtn()
+  })
+
+  function updateAudioBtn() {
+    audioToggle.textContent = isAudioOn ? 'Audio ON' : 'Audio OFF'
+  }
+
 
   // gsap ends
 });

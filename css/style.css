@@ -103,3 +103,13 @@
   font-family: var(--sans-serif);
   color: var(--sand);
 }
+
+.audio-btn {
+  font-family: var(--type);
+  font-size: 1rem;
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+}
