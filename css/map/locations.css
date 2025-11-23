@@ -5,6 +5,38 @@
     stroke: var(--grey);
 }
 
+#ubi_1 {
+    transform: translate(350px, 410px);
+}
+
+#ubi_2 {
+    transform: translate(100px, 450px);
+}
+
+#ubi_3 {
+    transform: translate(60px, 60px);
+}
+
+#ubi_4 {
+    transform: translate(160px, 200px);
+}
+
+#ubi_5 {
+    transform: translate(270px, 130px);
+}
+
+#ubi_6 {
+    transform: translate(490px, 100px);
+}
+
+#ubi_7 {
+    transform: translate(220px, 300px);
+}
+
 #ubi_8 {
     transform: translate(380px, 180px);
+}
+
+#ubi_9 {
+    transform: translate(500px, 350px);
 }
