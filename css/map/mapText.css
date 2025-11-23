@@ -1,0 +1,9 @@
+.label-water {
+    fill: var(--grey);
+    stroke: none;
+    font-family: var(--mono);
+    letter-spacing: .2em;
+    font-size: 1.5rem;
+
+    transform: translate(300px, -10px);
+}

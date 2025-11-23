@@ -13,8 +13,8 @@
 
   --sans-serif: "quicksand", Arial, sans-serif;
   --serif: "instrument", "Times New Roman", Times, serif;
-  /* --typewriter: 'typewriter', monospace; */
-  --type: 'oceanside', monospace;
+  --type: 'oceanside';
+  /* --mono: 'sansation'; */
 
   --gradient: radial-gradient(var(--sand), var(--golden));
 }
