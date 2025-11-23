@@ -1,15 +1,14 @@
-console.log("coords script loaded");
+const location=document.querySelectorAll('.circle')
+console.log('coords')
 
-const coordsEl = document.querySelector(".coords");
-console.log("coordsEl:", coordsEl);
+gsap.set(location,{
+scale:1,
+transformOrigin:"50% 50%",
+})
 
-function updateCoords() {
-  const lat = (Math.random() * 180 - 90).toFixed(4);
-  const lng = (Math.random() * 360 - 180).toFixed(4);
-  coordsEl.textContent = `Lat: ${lat} | Lng: ${lng}`;
-}
-
-window.addEventListener("scroll", () => {
-  console.log("scrollX:", window.scrollX);
-  updateCoords();
-});
+gsap.to(location,{
+  scale:1.2,
+  repeat:-1,
+  yoyo:true,
+  duration:1,
+})
