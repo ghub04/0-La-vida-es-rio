@@ -1,3 +1,9 @@
+export let isAudioOn = false
+
+export function getAudio() {
+  return isAudioOn
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // console.log("init timeline cover");
   gsap.registerPlugin(SplitText);
@@ -10,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const audio = new Audio('../assets/forest-wind.mp3')
   const audioToggle = document.querySelector('.audio-btn')
   audio.loop = true
-  let isAudioOn = false
 
   let tlCover = gsap.timeline();
   let split;
@@ -165,5 +170,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+
   // gsap ends
 });
+
+
+
+
+

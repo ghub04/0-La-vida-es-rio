@@ -7,7 +7,7 @@ const closeBtn = document.querySelector(".close");
 fetch('/js/about.json')
     .then((response) => response.json())
     .then((abt) => {
-        console.log('about')
+        // console.log('about')
 
         aboutWrapper.innerHTML = `<div class=about-container><p>${abt.title}</p><p>${abt.text}</p></div>`
 

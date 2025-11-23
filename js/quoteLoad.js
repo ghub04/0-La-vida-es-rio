@@ -1,8 +1,15 @@
+import { getAudio } from '/js/timelineCover.js'
+
+console.log(getAudio())
+
 const islands = document.querySelectorAll(".island-item");
 const container = document.querySelector(".quote-container");
 const closeBtn = document.querySelector(".close");
 const popUp = document.querySelector(".quote-wrapper");
 const mapInfo = document.querySelectorAll(".map-info p");
+
+const audioPaper = new Audio('../assets/paper-fx-sound.wav')
+let fxPlayed = false
 
 export function quoteLoad() {
   fetch("/js/quotes.json")
@@ -55,6 +62,8 @@ function openQuote() {
       duration: 0.3,
       ease: "power2.out",
     });
+  playFx()
+
 }
 
 // cerrar la cita
@@ -74,6 +83,7 @@ function closeQuote() {
         popUp.style.pointerEvents = "none";
       },
     });
+  playFx()
 }
 
 // aparece el boton seguir explorando
@@ -104,3 +114,15 @@ function splitQuote() {
     },
   });
 }
+
+//fx sound
+function playFx() {
+  if (getAudio()) {
+    audioPaper.play()
+  }
+}
+
+
+
+
+
