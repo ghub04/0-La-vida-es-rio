@@ -122,3 +122,15 @@
   font-family: var(--script);
   font-size: 1rem;
 }
+
+.about-wrapper {
+  opacity: 0;
+  background-color: red;
+  position: absolute;
+  inset: 0;
+
+  z-index: 25;
+  pointer-events: none;
+
+
+}
