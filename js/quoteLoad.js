@@ -41,12 +41,12 @@ function openQuote() {
   popUp.style.pointerEvents = "auto";
   let tlOpenQuote = gsap.timeline();
 
-  gsap.set (popUp,{
-    y:50,
+  gsap.set(popUp, {
+    y: 50,
   })
   tlOpenQuote
     .to(popUp, {
-      y:30,
+      y: 30,
       autoAlpha: .9,
       duration: 0.2,
     })
@@ -63,7 +63,7 @@ function closeQuote() {
 
   tlCloseQuote
     .to(popUp, {
-      y:50,
+      y: 50,
       autoAlpha: 0,
       duration: 0.2,
     })
@@ -84,6 +84,8 @@ function close() {
     delay: 0.5,
   });
 }
+
+// animacion de la cita
 
 function splitQuote() {
   let splitQuote = SplitText.create(".quote-text", {
