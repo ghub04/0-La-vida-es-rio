@@ -1,0 +1,10 @@
+/* ubicaciones */
+.circle {
+    fill: white;
+    stroke-width: 2px;
+    stroke: var(--grey);
+}
+
+#ubi_8 {
+    transform: translate(380px, 180px);
+}
