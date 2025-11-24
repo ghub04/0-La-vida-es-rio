@@ -53,7 +53,8 @@
 
 .close {
   z-index: 10;
-  position: relative;
+  position: absolute;
+  bottom: 10%;
   margin: 2rem 0;
   font-family: var(--script);
   font-size: 1rem;

@@ -1,5 +1,6 @@
 const aboutWrapper = document.querySelector('.about-wrapper')
-const aboutContainer = document.querySelector('.about-info')
+// const aboutContainer = document.querySelector('.about-info')
+let aboutContainer
 const aboutBtn = document.querySelector('.about-btn')
 const closeBtn = document.querySelector(".close");
 
@@ -10,6 +11,8 @@ fetch('/js/about.json')
         // console.log('about')
 
         aboutWrapper.innerHTML = `<div class=about-container><p>${abt.title}</p><p>${abt.text}</p></div>`
+
+        aboutContainer = document.querySelector('.about-container')
 
         aboutBtn.addEventListener('click', () => {
             openAbout()
@@ -34,6 +37,10 @@ function openAbout() {
             autoAlpha: 1,
             duration: 0.3,
             ease: "power2.out",
+        }).to(closeBtn, {
+            autoAlpha: 1,
+            duration: .3,
         });
 }
+
 
