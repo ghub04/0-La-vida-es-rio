@@ -1,4 +1,5 @@
 import { getAudio } from '/js/timelineCover.js'
+import { moved } from '/js/mapDrag.js';
 
 console.log(getAudio())
 
@@ -19,6 +20,7 @@ export function quoteLoad() {
 
       islands.forEach((island) => {
         island.addEventListener("click", () => {
+          if (moved) return;
           const id = Number(island.dataset.id);
           const quote = quotes.find((q) => q.id === id);
           // console.log(id);

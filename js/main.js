@@ -3,6 +3,7 @@ import { quoteLoad } from "/js/quoteLoad.js";
 import "/js/timelineCover.js";
 import "/js/coords.js";
 import "/js/aboutLoad.js"
+import "/js/mapDrag.js"
 
 document.addEventListener("DOMContentLoaded", () => {
   customCursor();
