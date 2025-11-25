@@ -3,7 +3,14 @@ const map = document.getElementById("map");
 let isDragging = false;
 let startX, startY;
 let currentX = 0, currentY = 0;
-export let moved = false; // <--- NUEVO
+export let moved = false;
+
+// wheel zoom
+let scale = 3;               // escala inicial
+const minScale = 1;          // límite mínimo
+const maxScale = 6;          // límite máximo
+const zoomSpeed = 0.2;       // sensibilidad
+
 
 map.addEventListener("mousedown", startDrag);
 map.addEventListener("touchstart", startDrag, { passive: false });
@@ -53,3 +60,25 @@ function endDrag(e) {
     }
     isDragging = false;
 }
+
+
+// wheel zoom
+map.addEventListener("wheel", onZoom, { passive: false });
+
+function onZoom(e) {
+    e.preventDefault();
+
+    // deltaY > 0 → scroll down → alejar
+    // deltaY < 0 → scroll up → acercar
+    const direction = e.deltaY > 0 ? -1 : 1;
+
+    // nueva escala
+    const newScale = scale + direction * zoomSpeed;
+
+    // límites
+    scale = Math.min(maxScale, Math.max(minScale, newScale));
+
+    // aplicar zoom manteniendo posición actual del drag
+    map.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
+}
+
