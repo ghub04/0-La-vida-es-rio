@@ -54,7 +54,7 @@
   position: absolute;
   overflow-y: hidden;
   z-index: 10;
-  border: 10px solid black;
+  /* border: 10px solid black; */
 }
 
 /* svg */
