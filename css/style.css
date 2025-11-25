@@ -140,3 +140,14 @@
   padding: 30px;
   font-size: 1rem;
 }
+
+
+
+/* REFERENCIAS BREAKPOINTS
+
+Mobile ==> 320px
+Tablet ==> 768px
+Desktop ==> 1024px
+Big-Desktop ==>1600px */
+
+@media (min-width: 768px) {}
