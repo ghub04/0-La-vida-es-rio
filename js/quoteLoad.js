@@ -64,7 +64,7 @@ function openQuote() {
       duration: 0.3,
       ease: "power2.out",
     });
-  playFx()
+  // playFx()
 
 }
 
@@ -85,7 +85,7 @@ function closeQuote() {
         popUp.style.pointerEvents = "none";
       },
     });
-  playFx()
+  // playFx()
 }
 
 // aparece el boton seguir explorando

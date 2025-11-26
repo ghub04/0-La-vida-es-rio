@@ -1,3 +1,4 @@
+// puntos
 const location = document.querySelectorAll('.circle')
 
 gsap.set(location, {
@@ -13,4 +14,17 @@ location.forEach((loc, i) => {
     duration: 1,
     delay: i * .2,
   })
+})
+
+// orilla
+
+const shoreWaves = document.querySelector('.shore')
+
+let tlShore = gsap.timeline()
+
+tlShore.to(shoreWaves, {
+  autoAlpha: 0.8,
+  repeat: -1,
+  yoyo: true,
+  duration: 5
 })

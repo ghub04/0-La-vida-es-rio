@@ -19,13 +19,14 @@
   text-rendering: optimizeLegibility;
 }
 
+
 .filter {
   position: absolute;
   top: 0;
 }
 
 .cover {
-  /* visibility: hidden; */
+  visibility: hidden;
   width: 100%;
   height: 100svh;
 
@@ -150,4 +151,11 @@ Tablet ==> 768px
 Desktop ==> 1024px
 Big-Desktop ==>1600px */
 
-@media (min-width: 768px) {}
+@media (min-width: 1024px) {
+
+  .cursor {
+    display: initial;
+  }
+
+  /* ends 1024px */
+}

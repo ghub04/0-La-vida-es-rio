@@ -59,13 +59,14 @@
     <div class="islands-wrapper-map container">
       <?xml version="1.0" encoding="UTF-8"?>
       <svg id="map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 629.64 513.57">
-        <!-- stroke -->
-        <style stroke-miterlimit="10px"></style>
-        <use href="#islas" stroke="var(--sand)" stroke-width="15" fill="none" />
-        <use href="#islas" stroke="var(--golden)" stroke-width="10" fill="none" />
-        <use href="#islas" stroke="var(--sand)" stroke-width="8" fill="none" />
-        <use href="#islas" stroke="var(--golden)" stroke-width="6" fill="none" />
-        <use href="#islas" stroke="var(--sand)" stroke-width="2" fill="none" />
+        <!-- stroke orilla -->
+        <use class="shore" href="#islas" />
+        <!-- stroke doble borde -->
+        <use href="#islas" stroke="var(--sand)" stroke-width="15" fill="none" stroke-linejoin="round" />
+        <use href="#islas" stroke="var(--golden)" stroke-width="10" fill="none" stroke-linejoin="round" />
+        <use href="#islas" stroke="var(--sand)" stroke-width="8" fill="none" stroke-linejoin="round" />
+        <use href="#islas" stroke="var(--golden)" stroke-width="6" fill="none" stroke-linejoin="round" />
+        <use href="#islas" stroke="var(--sand)" stroke-width="2" fill="none" stroke-linejoin="round" />
         <!-- stroke ends -->
 
         <g data-name="islas" id="islas">

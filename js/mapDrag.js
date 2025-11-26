@@ -4,17 +4,17 @@ let isDragging = false;
 let startX = 0;
 let startY = 0;
 
-let offsetX = 0;     // <--- coordenadas REALES del mapa
+let offsetX = 0;
 let offsetY = 0;
 
-let scale = 3;
+let scale = 2;
 const minScale = 1;
 const maxScale = 6;
 const zoomSpeed = 0.2;
 
 export let moved = false;
 
-// DRAG -------------------------
+// drag
 map.addEventListener("mousedown", startDrag);
 map.addEventListener("touchstart", startDrag, { passive: false });
 
@@ -44,7 +44,7 @@ function drag(e) {
     const newX = p.clientX - startX;
     const newY = p.clientY - startY;
 
-    // Detectamos si realmente hubo movimiento
+    // si hubo movimiento
     if (Math.abs(newX - offsetX) > 3 || Math.abs(newY - offsetY) > 3) {
         moved = true;
     }
@@ -63,7 +63,7 @@ function endDrag(e) {
     isDragging = false;
 }
 
-// ZOOM -------------------------
+// zoom
 map.addEventListener("wheel", onZoom, { passive: false });
 
 function onZoom(e) {
@@ -77,7 +77,7 @@ function onZoom(e) {
     applyTransform();
 }
 
-// RENDER ------------------------
+// render
 function applyTransform() {
     map.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
 }
