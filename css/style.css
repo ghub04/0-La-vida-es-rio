@@ -108,6 +108,8 @@
 
 /* FOOTER */
 .footer {
+  /* pointer-events: auto;
+  background-color: brown; */
   width: 100%;
   height: auto;
 
