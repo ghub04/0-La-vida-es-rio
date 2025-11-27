@@ -24,11 +24,12 @@
 
 /* cruces patrón */
 .map-overlay {
-  position: absolute;
+  position: fixed;
   z-index: 5;
+  transform-origin: center center;
 
-  width: 100%;
-  height: 100svh;
+  width: 200%;
+  height: 200%;
 
   opacity: 0.4;
   background: radial-gradient(circle,

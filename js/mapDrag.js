@@ -1,4 +1,5 @@
 const map = document.querySelector('#map');
+const mapOverlay = document.querySelector('.map-overlay')
 
 
 let isDragging = false;
@@ -110,8 +111,8 @@ function drag(e) {
     }
 
 
-    console.log('offsetX:', offsetX, 'BoundsX:', bounds.minX, bounds.maxX);
-    console.log('offsetY', offsetY, 'BoundsY:', bounds.minY, bounds.maxY);
+    // console.log('offsetX:', offsetX, 'BoundsX:', bounds.minX, bounds.maxX);
+    // console.log('offsetY', offsetY, 'BoundsY:', bounds.minY, bounds.maxY);
 
     applyTransform();
 }
@@ -155,5 +156,10 @@ function onZoom(e) {
 // render
 function applyTransform() {
     map.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+
+    // drag overlay cruces
+    if (mapOverlay) {
+        mapOverlay.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(1)`;
+    }
 }
 
