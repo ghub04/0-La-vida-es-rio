@@ -1,5 +1,6 @@
 const map = document.querySelector('#map');
 
+
 let isDragging = false;
 let startX = 0;
 let startY = 0;
@@ -155,3 +156,4 @@ function onZoom(e) {
 function applyTransform() {
     map.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
 }
+
