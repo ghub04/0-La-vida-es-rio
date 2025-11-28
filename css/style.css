@@ -26,7 +26,7 @@
 }
 
 .cover {
-  visibility: hidden;
+  /* visibility: hidden; */
   width: 100%;
   height: 100svh;
 
