@@ -106,14 +106,26 @@
 }
 
 #island_1 {
-  transform: translate(5px, 0);
+  transform: translate(5px, -25px);
 }
 
 #island_2 {
-  transform: translateX(-5px);
+  transform: translate(-5px, -20px);
 }
 
-/* 
+#island_4 {
+  transform: translate(20px, 10px);
+}
+
+#island_5 {
+  transform: translate(20px, -30px);
+}
+
+
 #island_6 {
-  transform: translateX(5px);
-} */
+  transform: translate(5px, 15px);
+}
+
+#island_7 {
+  transform: translate(20px, 0);
+}
