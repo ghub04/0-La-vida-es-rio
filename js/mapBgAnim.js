@@ -14,8 +14,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
     // gsap ends
 })
