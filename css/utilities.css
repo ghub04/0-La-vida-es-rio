@@ -8,6 +8,7 @@
   --lightBlue: #c6e4ee;
   --turquoise: #80c9cf;
   --deepBlue: #4e9590;
+  --darkBlue: #153142;
   --grey: #6b7b8c;
   --black: #1e1e1e;
 
@@ -18,4 +19,5 @@
   --mono: 'sansation', monospace;
 
   --gradient: radial-gradient(var(--sand), var(--golden));
+  --water-gradient: radial-gradient(circle, var(--turquoise) 20%, var(--deepBlue) 50%, var(--darkBlue) 100%);
 }
