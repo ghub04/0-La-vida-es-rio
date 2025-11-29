@@ -102,8 +102,8 @@
 .shore {
   stroke: var(--lightBlue);
   stroke-width: 20px;
-  filter: blur(5px);
-  opacity: .5;
+  filter: blur(1px);
+  opacity: 1;
 }
 
 #island_1 {
