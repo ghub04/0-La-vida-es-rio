@@ -11,7 +11,7 @@ let offsetY = 0;
 
 let scale = 2;
 const minScale = 1;
-const maxScale = 3;
+const maxScale = 2;
 const zoomSpeed = 0.2;
 
 export let moved = false;
