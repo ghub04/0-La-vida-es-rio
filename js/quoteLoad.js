@@ -9,11 +9,11 @@ const closeBtn = document.querySelector(".close");
 const popUp = document.querySelector(".quote-wrapper");
 const mapInfo = document.querySelectorAll(".map-info p");
 
-const audioPaper = new Audio('../assets/paper-fx-sound.wav')
+const audioPaper = new Audio('assets/paper-fx-sound.wav')
 let fxPlayed = false
 
 export function quoteLoad() {
-  fetch("/js/json/quotes.json")
+  fetch("js/json/quotes.json")
     .then((response) => response.json())
     .then((quotes) => {
       // citas cargadas
