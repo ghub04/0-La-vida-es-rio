@@ -7,7 +7,7 @@
   height: 100svh;
   /* background-color: var(--darkBlue); */
   background: var(--water-gradient);
-  filter: url(#advanced-texture)
+  filter: url(#ocean-texture)
 }
 
 /* ruido textura */
