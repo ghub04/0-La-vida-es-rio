@@ -5,7 +5,7 @@ const aboutBtn = document.querySelector('.about-btn')
 const closeBtn = document.querySelector(".close");
 
 
-fetch('/js/about.json')
+fetch('/js/json/about.json')
     .then((response) => response.json())
     .then((abt) => {
         // console.log('about')

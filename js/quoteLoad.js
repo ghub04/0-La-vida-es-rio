@@ -13,7 +13,7 @@ const audioPaper = new Audio('../assets/paper-fx-sound.wav')
 let fxPlayed = false
 
 export function quoteLoad() {
-  fetch("/js/quotes.json")
+  fetch("/js/json/quotes.json")
     .then((response) => response.json())
     .then((quotes) => {
       // citas cargadas
