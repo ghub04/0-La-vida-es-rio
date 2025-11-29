@@ -39,6 +39,24 @@
   z-index: 50;
 }
 
+/* SVG COVER STYLES */
+#svg-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 800px;
+  height: 100svh;
+}
+
+#svg-river {
+  fill: var(--turquoise);
+}
+
+#svg-trees {
+  fill: var(--green);
+}
+
 .cover-info {
   width: 100%;
   height: auto;
