@@ -1,5 +1,5 @@
-import { getAudio } from '/js/timelineCover.js'
-import { moved } from '/js/mapDrag.js';
+import { getAudio } from './timelineCover.js'
+import { moved } from './mapDrag.js';
 
 console.log(getAudio())
 
