@@ -40,6 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let split;
 
   // ANIMACION TITLE
+  gsap.set(titleContainer, {
+    autoAlpha: 0,
+    y: '30'
+  })
   function textAnimation() {
     document.fonts.ready.then(() => {
       split = SplitText.create(titleH1, {
@@ -49,15 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
       let words = split.words
 
       textAnimation
-        .from(titleContainer, {
-          y: 100,
-          autoAlpha: 0,
+        .to(titleContainer, {
+          y: 0,
+          autoAlpha: 1,
           duration: 3,
           ease: "power2.out",
         }).from(words, {
           y: 100,
           duration: 3,
-          stagger: 0.5,
+          stagger: 0.05,
         }, '<')
         .to(
           "#wavy feTurbulence",
@@ -75,20 +79,39 @@ document.addEventListener("DOMContentLoaded", () => {
   // -------
 
   // LOADING
+  let tlLoader = gsap.timeline()
+
   gsap.set(loader, {
     drawSVG: '0'
   })
-  let tlLoader = gsap.timeline()
+  gsap.set(svgCover, {
+    drawSVG: '0',
+  })
 
   tlLoader.to(loader, {
     drawSVG: '100%',
     duration: 7,
     ease: 'power2.inOut',
-  }).to(preLoader, {
-    autoAlpha: 0,
-    duration: 1,
-    onComplete: () => textAnimation()
-  })
+  }).call(svgCoverAnim, null, '-=3')
+    .to(preLoader, {
+      autoAlpha: 0,
+      duration: 1,
+      onComplete: () => textAnimation()
+    })
+  // SVG COVER ANIM
+  function svgCoverAnim() {
+    svgCover.forEach((path, n) => {
+      gsap.to(path, {
+        drawSVG: '100%',
+        duration: 2,
+        delay: n * 0.1,
+        autoAlpha: 0.2
+      })
+    })
+  }
+
+
+
   // -------
 
   // CLOSE COVER
@@ -153,20 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   // -------
 
-  // SVG COVER ANIM
-
-
-  gsap.set(svgCover, {
-    drawSVG: '0',
-  })
-
-  svgCover.forEach((path, n) => {
-    gsap.to(path, {
-      drawSVG: '100%',
-      duration: 5,
-      delay: n * 0.5
-    })
-  })
 
   // -------
 
