@@ -137,9 +137,7 @@
     width: auto;
     height: 120%;
 
-
     stroke: var(--grey);
-    /* opacity: .2; */
     stroke-width: 1px;
     stroke-miterlimit: 10;
 }

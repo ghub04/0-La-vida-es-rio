@@ -30,9 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
   audio.loop = true
 
   // LOADER
+  const preLoader = document.querySelector('.pre-loader')
   const loader = document.querySelector('.pre-loader svg path')
 
-  // SVG COVER
+  // BACKGROUND SVG COVER
   const svgCover = document.querySelectorAll('.svg-cover svg g line')
 
   let tlCover = gsap.timeline();
@@ -77,10 +78,15 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.set(loader, {
     drawSVG: '0'
   })
-  gsap.to(loader, {
+  let tlLoader = gsap.timeline()
+
+  tlLoader.to(loader, {
     drawSVG: '100%',
     duration: 7,
-    ease: 'power2.inOut'
+    ease: 'power2.inOut',
+  }).to(preLoader, {
+    autoAlpha: 0,
+    duration: 1,
   })
   // -------
 
@@ -147,15 +153,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // -------
 
   // SVG COVER ANIM
+
+
   gsap.set(svgCover, {
     drawSVG: '0',
-    autoAlpha: 1
   })
 
-  gsap.to(svgCover, {
-    drawSVG: '100%',
-    duration: 5,
-    autoAlpha: 0
+  svgCover.forEach((path) => {
+    gsap.to(path, {
+      drawSVG: '100%',
+      duration: 5,
+    })
   })
   // -------
 
