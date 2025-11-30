@@ -169,5 +169,9 @@ Big-Desktop ==>1600px */
     left: 50%;
   }
 
+  .info-container {
+    max-width: 540px;
+  }
+
   /* ends 1024px */
 }
