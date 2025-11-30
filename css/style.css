@@ -5,6 +5,7 @@
 @import url(./map/locations.css);
 @import url(./map/mapText.css);
 @import url(./cover/coverStyle.css);
+@import url(./cover/loader.css);
 
 * {
   margin: 0;

@@ -8,11 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // console.log("init timeline cover");
   gsap.registerPlugin(SplitText);
 
-  const cover = document.querySelector(".cover");
-  const msg = document.querySelector("#info-1");
-  const closeCover = document.querySelector("#info-start");
-  const mapInfo = document.querySelectorAll(".map-info p");
+  const borders = document.querySelector('.border-container')
 
+  const cover = document.querySelector(".cover");
+
+  const closeCover = document.querySelector("#close-cover");
+
+  const msg = document.querySelector("#info-1");
+
+  const mapInfo = document.querySelectorAll(".map-info p");
+  // TITLE
+  const titleContainer = document.querySelector('.title')
+  const titleH1 = document.querySelector('.title h1')
+
+  // AUDIO
   const audio = new Audio('assets/forest-wind.mp3')
   const audioToggle = document.querySelector('.audio-btn')
   audio.loop = true
@@ -23,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // animacion la vida es rio
   function textAnimation() {
     document.fonts.ready.then(() => {
-      split = SplitText.create(".title", {
+      split = SplitText.create(titleH1, {
         type: "words",
       });
       let textAnimation = gsap.timeline();
 
       textAnimation
-        .from(split.words, {
+        .from(titleContainer, {
           y: 100,
           autoAlpha: 0,
           stagger: 0.05,

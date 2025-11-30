@@ -3,12 +3,19 @@
     height: 100svh;
     position: absolute;
     z-index: 50;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-
 .pre-loader svg {
-    stroke: blue;
-    stroke-width: 10px;
+    width: 120%;
+    height: 100%;
+    fill: none;
+    stroke: var(--turquoise);
+    stroke-width: 50px;
     position: absolute;
 
 }
