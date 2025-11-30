@@ -7,7 +7,8 @@
   height: 100svh;
   /* background-color: var(--darkBlue); */
   background: var(--water-gradient);
-  filter: url(#ocean-texture)
+  filter: url(#ocean-texture);
+
 }
 
 /* ruido textura */
@@ -20,7 +21,6 @@
   overflow: hidden;
   -webkit-filter: url(#noise);
   pointer-events: none;
-
 }
 
 /* cruces patrón */
@@ -32,7 +32,7 @@
   width: 200%;
   height: 200%;
 
-  opacity: 0.4;
+  opacity: .4;
   background: radial-gradient(circle,
       transparent 20%,
       #e5e5f7 20%,

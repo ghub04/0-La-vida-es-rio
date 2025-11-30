@@ -175,8 +175,8 @@
   <svg class="filter">
     <filter id="ocean-texture">
       <feTurbulence result="noise" numOctaves="3" baseFrequency=".7" type="fractalNoise"></feTurbulence>
-      <feSpecularLighting result="specular" lighting-color="#fff" specularExponent="20" specularConstant="0.8"
-        surfaceScale="2" in="noise">
+      <feSpecularLighting result="specular" lighting-color="white" specularExponent="20" specularConstant=".8"
+        surfaceScale="10" in="noise">
         <fePointLight></fePointLight>
       </feSpecularLighting>
       <feComposite result="litNoise" operator="in" in2="SourceGraphic" in="specular"></feComposite>

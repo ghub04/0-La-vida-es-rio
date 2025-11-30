@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const turbulence = document.querySelector('#ocean-texture feTurbulence');
 
     gsap.to(turbulence, {
-        attr: { baseFrequency: 0.72 },
-        duration: 15,
-        yoyo: true,
+        attr: { baseFrequency: '0.72' },
+        duration: 60,
+        // yoyo: true,
         repeat: -1,
-        ease: "sine.inOut"
+        // ease: "sine.inOut"
     });
 
 
