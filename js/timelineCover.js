@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // BACKGROUND SVG COVER
   const svgCover = document.querySelectorAll('.svg-cover svg g line')
 
+  // INFO CONTAINER 
+  const info = document.querySelector('.info-about')
+
   let tlCover = gsap.timeline();
   let split;
 
@@ -97,7 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
       autoAlpha: 0,
       duration: 1,
       onComplete: () => textAnimation()
-    })
+    }).call(splitInfoAnim, null, '+10')
+
+
   // SVG COVER ANIM
   function svgCoverAnim() {
     svgCover.forEach((path, n) => {
@@ -109,10 +114,25 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
   }
-
-
-
   // -------
+
+  // INFO COVER
+  function splitInfoAnim() {
+    let splitinfo = SplitText.create(info, {
+      type: "words",
+    });
+
+
+    let infoWords = splitinfo.words
+    gsap.set(infoWords, {
+      autoAlpha: .3,
+    });
+    gsap.to(infoWords, {
+      autoAlpha: 1,
+      duration: 2,
+      stagger: 0.05,
+    });
+  }
 
   // CLOSE COVER
   gsap.set(closeCover, {

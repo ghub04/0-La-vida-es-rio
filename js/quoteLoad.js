@@ -93,7 +93,7 @@ function close() {
   gsap.to(closeBtn, {
     autoAlpha: 1,
     duration: 1,
-    delay: 0.5,
+    // delay: 0.5,
   });
 }
 
