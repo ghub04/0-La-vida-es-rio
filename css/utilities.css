@@ -18,6 +18,6 @@
   --script: 'oceanside', monospace;
   --mono: 'sansation', monospace;
 
-  --gradient: radial-gradient(var(--sand), var(--golden));
+  --gradient: radial-gradient(circle, var(--sand), var(--golden));
   --water-gradient: radial-gradient(circle, var(--turquoise) 20%, var(--deepBlue) 50%, var(--darkBlue) 100%);
 }

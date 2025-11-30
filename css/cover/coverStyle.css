@@ -1,9 +1,11 @@
+@import url(/css/utilities.css);
+
 .cover {
     /* visibility: hidden; */
     width: 100%;
     height: 100svh;
 
-    background-color: var(--golden);
+    background: var(--gradient);
     text-align: center;
 
     flex-direction: column;
