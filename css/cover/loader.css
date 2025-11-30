@@ -1,0 +1,14 @@
+.pre-loader {
+    width: 100%;
+    height: 100svh;
+    position: absolute;
+    z-index: 50;
+}
+
+
+.pre-loader svg {
+    stroke: blue;
+    stroke-width: 10px;
+    position: absolute;
+
+}
