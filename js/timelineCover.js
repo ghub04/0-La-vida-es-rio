@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }).to(preLoader, {
     autoAlpha: 0,
     duration: 1,
+    onComplete: () => textAnimation()
   })
   // -------
 
@@ -159,12 +160,14 @@ document.addEventListener("DOMContentLoaded", () => {
     drawSVG: '0',
   })
 
-  svgCover.forEach((path) => {
+  svgCover.forEach((path, n) => {
     gsap.to(path, {
       drawSVG: '100%',
       duration: 5,
+      delay: n * 0.5
     })
   })
+
   // -------
 
 
