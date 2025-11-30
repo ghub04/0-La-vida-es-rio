@@ -4,6 +4,7 @@
 @import url(./map/map.css);
 @import url(./map/locations.css);
 @import url(./map/mapText.css);
+@import url(./cover/coverStyle.css);
 
 * {
   margin: 0;
@@ -25,7 +26,7 @@
 }
 
 .cover {
-  visibility: hidden;
+  /* visibility: hidden; */
   width: 100%;
   height: 100svh;
 
