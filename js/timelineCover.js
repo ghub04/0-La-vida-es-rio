@@ -7,14 +7,19 @@ export function getAudio() {
 document.addEventListener("DOMContentLoaded", () => {
   // console.log("init timeline cover");
   gsap.registerPlugin(SplitText);
+  gsap.registerPlugin(DrawSVGPlugin)
+  console.log('drawsvg')
 
   const borders = document.querySelector('.border-container')
 
+  // COVER
   const cover = document.querySelector(".cover");
 
   const closeCover = document.querySelector("#close-cover");
 
+  // MAPA
   const mapInfo = document.querySelectorAll(".map-info p");
+
   // TITLE
   const titleContainer = document.querySelector('.title')
   const titleH1 = document.querySelector('.title h1')
@@ -24,10 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const audioToggle = document.querySelector('.audio-btn')
   audio.loop = true
 
+  // LOADER
+  const loader = document.querySelector('.pre-loader svg path')
+
+  // SVG COVER
+  const svgCover = document.querySelectorAll('.svg-cover svg g line')
+
   let tlCover = gsap.timeline();
   let split;
 
-  // animacion la vida es rio
+  // ANIMACION TITLE
   function textAnimation() {
     document.fonts.ready.then(() => {
       split = SplitText.create(titleH1, {
@@ -60,56 +71,25 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     });
   }
+  // -------
 
-  // loading-bar
-  tlCover
-    .fromTo(
-      ".loader",
-      {
-        x: "-100%",
-      },
-      {
-        x: 0,
-        duration: 5,
-        ease: "power2.inOut",
-      }
-    )
-    .to(".loader", {
-      autoAlpha: 0,
-      duration: 0.3,
-    })
-    .add(textAnimation())
-    .add(coverInfo());
+  // LOADING
+  gsap.set(loader, {
+    drawSVG: '0'
+  })
+  gsap.to(loader, {
+    drawSVG: '100%',
+    duration: 7,
+    ease: 'power2.inOut'
+  })
+  // -------
 
-
+  // CLOSE COVER
   gsap.set(closeCover, {
     y: 0,
     autoAlpha: 0,
   });
 
-  function coverInfo() {
-    let tlCoverInfo = gsap.timeline();
-    tlCoverInfo
-      .to(msg, {
-        y: -100,
-        autoAlpha: 1,
-        duration: 1,
-        delay: 3,
-      })
-      .to(msg, {
-        autoAlpha: 0,
-        duration: 1,
-        delay: 2,
-      })
-      .to(closeCover, {
-        autoAlpha: 1,
-        duration: 1,
-        delay: 1.5,
-      });
-  }
-  coverInfo();
-
-  // ocultar cover una vez completada la carga
   function hideCover() {
     gsap.to(cover, {
       autoAlpha: 0,
@@ -127,18 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
       isAudioOn = true
     }
   });
+  // -------
 
-  // movimiento del mar
-  let oceanMove = gsap.timeline();
-  oceanMove.to("#erode feMorphology", {
-    attr: { radius: 5 },
-    duration: 2,
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut",
-  });
-
-  // map info animation
+  // MAP INFO
   gsap.set(mapInfo, {
     y: 10,
     autoAlpha: 0,
@@ -155,9 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+  // -------
 
 
-  // audio
+  // AUDIO
   audioToggle.addEventListener('click', () => {
     if (isAudioOn) {
       audio.pause()
@@ -172,6 +144,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateAudioBtn() {
     audioToggle.textContent = isAudioOn ? 'Audio ON' : 'Audio OFF'
   }
+  // -------
+
+  // SVG COVER ANIM
+  gsap.set(svgCover, {
+    drawSVG: '0',
+    autoAlpha: 1
+  })
+
+  gsap.to(svgCover, {
+    drawSVG: '100%',
+    duration: 5,
+    autoAlpha: 0
+  })
+  // -------
+
 
 
 

@@ -12,11 +12,13 @@
 }
 
 .pre-loader svg {
-    width: 120%;
+    width: 250%;
     height: 100%;
+    /* background-color: red; */
     fill: none;
     stroke: var(--turquoise);
     stroke-width: 50px;
     position: absolute;
+    transform: rotate(270deg);
 
 }

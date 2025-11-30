@@ -134,11 +134,12 @@
 
 .svg-cover svg {
     position: absolute;
-    height: 100%;
+    width: auto;
+    height: 120%;
 
 
     stroke: var(--grey);
-    opacity: .2;
+    /* opacity: .2; */
     stroke-width: 1px;
     stroke-miterlimit: 10;
 }
