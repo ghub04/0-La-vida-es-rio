@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+
     let infoWords = splitinfo.words
     gsap.set(infoWords, {
       autoAlpha: .3,
@@ -135,28 +136,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // CLOSE COVER
-  gsap.set(closeCover, {
-    y: 0,
-    autoAlpha: 0,
-  });
+  function closeCoverAnim() {
 
-  function hideCover() {
-    gsap.to(cover, {
+    gsap.set(closeCover, {
+      y: 0,
       autoAlpha: 0,
-      duration: 0.5,
+    });
+
+    function hideCover() {
+      gsap.to(cover, {
+        autoAlpha: 1,
+        duration: 0.5,
+      });
+    }
+
+    closeCover.addEventListener("click", () => {
+      // console.log("close");
+      hideCover();
+      mapText();
+
+      if (!isAudioOn) {
+        audio.play()
+        isAudioOn = true
+      }
     });
   }
-
-  closeCover.addEventListener("click", () => {
-    // console.log("close");
-    hideCover();
-    mapText();
-
-    if (!isAudioOn) {
-      audio.play()
-      isAudioOn = true
-    }
-  });
+  closeCoverAnim()
   // -------
 
   // MAP INFO

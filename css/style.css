@@ -159,6 +159,15 @@ Tablet ==> 768px
 Desktop ==> 1024px
 Big-Desktop ==>1600px */
 
+@media (min-width:768px) {
+
+  .pre-loader svg {
+    width: 120%;
+    transform: rotate(0);
+
+  }
+}
+
 @media (min-width: 1024px) {
 
   .cursor {
@@ -172,6 +181,11 @@ Big-Desktop ==>1600px */
 
   .info-container {
     max-width: 540px;
+  }
+
+  .pre-loader svg {
+    width: 110%;
+    transform: rotate(0);
   }
 
   /* ends 1024px */
