@@ -78,18 +78,7 @@
   bottom: 10px;
 }
 
-.title {
-  font-family: var(--sans-serif);
-  font-weight: 700;
-  color: var(--black);
-  font-size: clamp(4rem, 10vw, 10rem);
-  text-align: center;
-  text-transform: uppercase;
 
-  filter: url(#wavy);
-
-  /* background-color: red; */
-}
 
 /* loader */
 .loader {
