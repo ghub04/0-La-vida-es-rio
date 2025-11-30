@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const closeCover = document.querySelector("#close-cover");
 
-  const msg = document.querySelector("#info-1");
-
   const mapInfo = document.querySelectorAll(".map-info p");
   // TITLE
   const titleContainer = document.querySelector('.title')
@@ -83,12 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .add(textAnimation())
     .add(coverInfo());
 
-
-  // mensaje mientras carga
-  gsap.set(msg, {
-    y: -90,
-    autoAlpha: 0,
-  });
 
   gsap.set(closeCover, {
     y: 0,
