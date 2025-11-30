@@ -33,19 +33,22 @@ document.addEventListener("DOMContentLoaded", () => {
   function textAnimation() {
     document.fonts.ready.then(() => {
       split = SplitText.create(titleH1, {
-        type: "words",
+        type: "chars, words",
       });
       let textAnimation = gsap.timeline();
+      let words = split.words
 
       textAnimation
         .from(titleContainer, {
           y: 100,
           autoAlpha: 0,
-          stagger: 0.05,
           duration: 3,
-          delay: 6,
           ease: "power2.out",
-        })
+        }).from(words, {
+          y: 100,
+          duration: 3,
+          stagger: 0.5,
+        }, '<')
         .to(
           "#wavy feTurbulence",
           {
@@ -55,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             repeat: -1,
             yoyo: true,
           },
-          "-=1"
+          "<"
         );
     });
   }

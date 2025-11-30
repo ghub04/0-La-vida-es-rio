@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    pointer-events: all;
 }
 
 .pre-loader svg {
