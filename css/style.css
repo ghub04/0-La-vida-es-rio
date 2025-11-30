@@ -65,7 +65,8 @@
   z-index: 25;
 }
 
-#info-2 {
+#info-start {
+  font-family: var(--script);
   width: 100%;
   height: auto;
   padding: 5px;

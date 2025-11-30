@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const cover = document.querySelector(".cover");
   const msg = document.querySelector("#info-1");
-  const closeCover = document.querySelector("#info-2");
+  const closeCover = document.querySelector("#info-start");
   const mapInfo = document.querySelectorAll(".map-info p");
 
   const audio = new Audio('assets/forest-wind.mp3')
