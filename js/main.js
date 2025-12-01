@@ -4,7 +4,6 @@ import "./coords.js";
 import "./aboutLoad.js"
 import "./draggable.js"
 // import "./mapDrag.js"
-import "./mapBgAnim.js"
 import "./cursor.js"
 
 document.addEventListener("DOMContentLoaded", () => {
