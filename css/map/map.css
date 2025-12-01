@@ -1,4 +1,11 @@
 /* color fondo */
+.map-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .map-bg {
   position: absolute;
   z-index: 1;
@@ -26,9 +33,12 @@
 
 /* cruces patrón */
 .map-overlay {
+  will-change: transform;
+  /* zoom */
+  transform-origin: center center;
+
   position: fixed;
   z-index: 5;
-  transform-origin: center center;
 
   width: 200%;
   height: 200%;
