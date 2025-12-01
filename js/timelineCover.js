@@ -29,10 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const audioToggle = document.querySelector('.audio-btn')
   audio.loop = true
 
-  // LOADER
-  const preLoader = document.querySelector('.pre-loader')
-  const loader = document.querySelector('.pre-loader svg path')
-
   // BACKGROUND SVG COVER
   const svgCover = document.querySelectorAll('.svg-cover svg g line')
 
@@ -66,53 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
           duration: 3,
           stagger: 0.05,
         }, '<')
-        .to(
-          "#wavy feTurbulence",
-          {
-            attr: { baseFrequency: "0.006" },
-            duration: 20,
-            stagger: 0.5,
-            repeat: -1,
-            yoyo: true,
-          },
-          "<"
-        );
+      // .to(
+      //   "#wavy feTurbulence",
+      //   {
+      //     attr: { baseFrequency: "0.006" },
+      //     duration: 20,
+      //     stagger: 0.5,
+      //     repeat: -1,
+      //     yoyo: true,
+      //   },
+      //   "<"
+      // );
     });
-  }
-  // -------
-
-  // LOADING
-  let tlLoader = gsap.timeline()
-
-  gsap.set(loader, {
-    drawSVG: '0'
-  })
-  gsap.set(svgCover, {
-    drawSVG: '0',
-  })
-
-  tlLoader.to(loader, {
-    drawSVG: '100%',
-    duration: 7,
-    ease: 'power2.inOut',
-  }).call(svgCoverAnim, null, '-=3')
-    .to(preLoader, {
-      autoAlpha: 0,
-      duration: 1,
-      onComplete: () => textAnimation()
-    }).call(splitInfoAnim, null, '+10')
-
-
-  // SVG COVER ANIM
-  function svgCoverAnim() {
-    svgCover.forEach((path, n) => {
-      gsap.to(path, {
-        drawSVG: '100%',
-        duration: 2,
-        delay: n * 0.1,
-        autoAlpha: 0.2
-      })
-    })
   }
   // -------
 
