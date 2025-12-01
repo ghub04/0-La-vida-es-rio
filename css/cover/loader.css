@@ -19,6 +19,6 @@
     stroke-width: 50px;
     position: absolute;
     transform: rotate(270deg);
-    filter: url(#wavy);
+    /* filter: url(#wavy); */
 
 }

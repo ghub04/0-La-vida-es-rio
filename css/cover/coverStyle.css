@@ -8,6 +8,7 @@
     top: 0;
     left: 0;
     z-index: 30;
+    background: var(--gradient);
 }
 
 
@@ -16,7 +17,7 @@
     height: 100svh;
     position: absolute;
     z-index: 22;
-    filter: url(#roughpaper);
+    /* filter: url(#roughpaper); */
 }
 
 .border-container {
