@@ -96,23 +96,28 @@ document.addEventListener("DOMContentLoaded", () => {
     function textAnimation() {
         console.log('title')
         document.fonts.ready.then(() => {
-            let split = SplitText.create(titleH1, {
-                type: "chars, words",
-            });
-            let textAnimation = gsap.timeline();
-            let words = split.words
 
-            textAnimation
-                .to(titleContainer, {
-                    y: 0,
-                    autoAlpha: 1,
-                    duration: 3,
-                    ease: "power2.out",
-                }).from(words, {
-                    y: 100,
-                    duration: 3,
-                    stagger: 0.05,
-                }, '<')
+            setTimeout(() => {
+
+
+                let split = SplitText.create(titleH1, {
+                    type: "chars, words",
+                });
+                let textAnimation = gsap.timeline();
+                let words = split.words
+
+                textAnimation
+                    .to(titleContainer, {
+                        y: 0,
+                        autoAlpha: 1,
+                        duration: 3,
+                        ease: "power2.out",
+                    }).from(words, {
+                        y: 100,
+                        duration: 3,
+                        stagger: 0.05,
+                    }, '<')
+            }, 50)
             // .to(
             //   "#wavy feTurbulence",
             //   {
