@@ -1,5 +1,5 @@
 import { quoteLoad } from "./quoteLoad.js";
-import "./timelineCover.js";
+// import "./timelineCover.js";
 import "./coords.js";
 import "./aboutLoad.js"
 import "./draggable.js"
