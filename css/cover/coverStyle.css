@@ -105,7 +105,7 @@
 }
 
 #close-cover:hover {
-    /* cursor: pointer; */
+    cursor: none;
     border-radius: 50%;
     outline: 1px solid var(--grey);
     transition: border 0.2s ease-in-out;
