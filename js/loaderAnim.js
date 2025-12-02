@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 
     gsap.set(displacementMap, {
-        attr: { baseFrequency: 0.005 } // Valor inicial bajo pero válido
+        attr: { baseFrequency: 0.001 } // Valor inicial bajo pero válido
     });
 
     // 
