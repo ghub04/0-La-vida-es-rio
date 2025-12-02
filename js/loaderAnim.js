@@ -93,9 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
         y: '30'
     })
 
+    const f = document.querySelector('#wavy feTurbulence');
     function textAnimation() {
         console.log('title')
         document.fonts.ready.then(() => {
+            requestAnimationFrame(() => {
+                f.baseFrequency += '0.001';
+            });
+
             titleH1.offsetHeight;
             setTimeout(() => {
 
@@ -122,17 +127,16 @@ document.addEventListener("DOMContentLoaded", () => {
                         stagger: 0.05,
                     }, '<')
             }, 50)
-            // .to(
-            //   "#wavy feTurbulence",
-            //   {
-            //     attr: { baseFrequency: "0.006" },
-            //     duration: 20,
-            //     stagger: 0.5,
-            //     repeat: -1,
-            //     yoyo: true,
-            //   },
-            //   "<"
-            // );
+                .to(f,
+                    {
+                        attr: { baseFrequency: "0.006" },
+                        duration: 2,
+                        stagger: 0.5,
+                        repeat: -1,
+                        yoyo: true,
+                    },
+                    "<"
+                );
         });
     }
     // -------
