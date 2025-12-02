@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log('title')
         document.fonts.ready.then(() => {
             requestAnimationFrame(() => {
-                f.baseFrequency += '0.001';
+                f.baseFrequency += '0.005';
             });
 
             titleH1.offsetHeight;
@@ -126,17 +126,17 @@ document.addEventListener("DOMContentLoaded", () => {
                         duration: 3,
                         stagger: 0.05,
                     }, '<')
+                    .to(f,
+                        {
+                            attr: { baseFrequency: "0.006" },
+                            duration: 20,
+                            stagger: 0.5,
+                            repeat: -1,
+                            yoyo: true,
+                        },
+                        "<"
+                    );
             }, 50)
-                .to(f,
-                    {
-                        attr: { baseFrequency: "0.006" },
-                        duration: 2,
-                        stagger: 0.5,
-                        repeat: -1,
-                        yoyo: true,
-                    },
-                    "<"
-                );
         });
     }
     // -------
