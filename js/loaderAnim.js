@@ -88,58 +88,116 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //la vida es rio anim
     // ANIMACION TITLE
+    // gsap.set(titleContainer, {
+    //     autoAlpha: 0,
+    //     y: '30'
+    // })
+
+    // const f = document.querySelector('#wavy feTurbulence');
+    // function textAnimation() {
+    //     console.log('title')
+    //     document.fonts.ready.then(() => {
+    //         requestAnimationFrame(() => {
+    //             f.baseFrequency += '0.005';
+    //         });
+
+    //         titleH1.offsetHeight;
+    //         setTimeout(() => {
+
+
+    //             let split = SplitText.create(titleH1, {
+    //                 type: "chars, words",
+    //             });
+    //             let textAnimation = gsap.timeline();
+    //             let words = split.words
+
+    //             textAnimation.to(titleH1, {
+    //                 delay: 1,
+    //                 y: 0,
+    //                 autoAlpha: 1,
+    //             })
+    //                 .to(titleContainer, {
+    //                     y: 0,
+    //                     autoAlpha: 1,
+    //                     duration: 3,
+    //                     ease: "power2.out",
+    //                 }).from(words, {
+    //                     y: 100,
+    //                     duration: 3,
+    //                     stagger: 0.05,
+    //                 }, '<')
+    //                 .to(f,
+    //                     {
+    //                         attr: { baseFrequency: "0.006" },
+    //                         duration: 20,
+    //                         stagger: 0.5,
+    //                         repeat: -1,
+    //                         yoyo: true,
+    //                     },
+    //                     "<"
+    //                 );
+    //         }, 50)
+    //     });
+    // }
+    // -------
+
+    // 
+    const displacementMap = document.querySelector('#wavy feTurbulence');
+
+    // 
+    gsap.set(displacementMap, {
+        attr: { baseFrequency: 0.005 } // Valor inicial bajo pero válido
+    });
+
+    // 
     gsap.set(titleContainer, {
         autoAlpha: 0,
-        y: '30'
-    })
+        y: 30
+    });
 
-    const f = document.querySelector('#wavy feTurbulence');
     function textAnimation() {
-        console.log('title')
         document.fonts.ready.then(() => {
-            requestAnimationFrame(() => {
-                f.baseFrequency += '0.005';
+
+
+            let split = SplitText.create(titleH1, {
+                type: "chars, words",
+
+                charsClass: "char-split"
             });
 
+
             titleH1.offsetHeight;
-            setTimeout(() => {
 
+            let tl = gsap.timeline();
+            let words = split.words;
 
-                let split = SplitText.create(titleH1, {
-                    type: "chars, words",
-                });
-                let textAnimation = gsap.timeline();
-                let words = split.words
-
-                textAnimation.to(titleH1, {
-                    delay: 1,
+            tl.to(titleH1, {
+                y: 0,
+                autoAlpha: 1,
+                duration: 0.1
+            })
+                .to(titleContainer, {
                     y: 0,
                     autoAlpha: 1,
+                    duration: 3,
+                    ease: "power2.out",
                 })
-                    .to(titleContainer, {
-                        y: 0,
-                        autoAlpha: 1,
-                        duration: 3,
-                        ease: "power2.out",
-                    }).from(words, {
-                        y: 100,
-                        duration: 3,
-                        stagger: 0.05,
-                    }, '<')
-                    .to(f,
-                        {
-                            attr: { baseFrequency: "0.006" },
-                            duration: 20,
-                            stagger: 0.5,
-                            repeat: -1,
-                            yoyo: true,
-                        },
-                        "<"
-                    );
-            }, 50)
+                .from(words, {
+                    y: 100,
+                    duration: 3,
+                    stagger: 0.05,
+                    ease: "power2.out"
+                }, '<')
+
+                .to(displacementMap, {
+                    attr: { baseFrequency: 0.006 },
+                    duration: 20,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut"
+                }, '<');
         });
     }
-    // -------
 
 
 
