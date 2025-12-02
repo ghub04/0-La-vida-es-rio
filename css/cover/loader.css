@@ -46,10 +46,11 @@
     height: 120px;
     border-radius: 50%;
     background: radial-gradient(circle, var(--turquoise) 0%, var(--lightBlue) 70%);
-    animation: ripple 1.6s infinite ease-out;
+    /* animation: ripple 1.6s infinite ease-out; */
     opacity: 0.7;
 }
 
+/* 
 @keyframes ripple {
     0% {
         transform: scale(0.6);
@@ -60,4 +61,4 @@
         transform: scale(2.4);
         opacity: 0;
     }
-}
+} */
