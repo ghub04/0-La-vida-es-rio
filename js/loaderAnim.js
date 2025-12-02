@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function textAnimation() {
         console.log('title')
         document.fonts.ready.then(() => {
-
+            titleH1.offsetHeight;
             setTimeout(() => {
 
 
@@ -106,7 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 let textAnimation = gsap.timeline();
                 let words = split.words
 
-                textAnimation
+                textAnimation.to(titleH1, {
+                    delay: 1,
+                    y: 0,
+                    autoAlpha: 1,
+                })
                     .to(titleContainer, {
                         y: 0,
                         autoAlpha: 1,

@@ -119,6 +119,7 @@
     text-transform: uppercase;
     color: var(--black);
     filter: url(#wavy);
+    opacity: 0;
 }
 
 /* SVG */
