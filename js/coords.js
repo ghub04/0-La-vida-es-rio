@@ -8,7 +8,7 @@ gsap.set(location, {
 
 location.forEach((loc, i) => {
   gsap.to(loc, {
-    scale: 1.5,
+    scale: 1.2,
     repeat: -1,
     yoyo: true,
     duration: 1,
