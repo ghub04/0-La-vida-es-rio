@@ -100,10 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
             hideCover();
             // mapText();
 
-            if (!isAudioOn) {
-                audio.play()
-                isAudioOn = true
-            }
+            // if (!isAudioOn) {
+            //     audio.play()
+            //     isAudioOn = true
+            // }
         });
     }
     // closeCoverAnim()
