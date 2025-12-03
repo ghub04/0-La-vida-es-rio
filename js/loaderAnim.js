@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "power2.out",
             delay: 0.2,
 
-        }).call(splitInfoAnim, null, '-=1')
+        }).call(splitInfoAnim, null, '-=')
         .call(closeCoverAnim, null, '+=0.2')
 
     // anim waves
@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         gsap.set(closeCover, {
             y: 0,
+            duration: 0.5,
             autoAlpha: 1,
         });
 
@@ -127,6 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
         y: 30
     });
 
+
+
     function textAnimation() {
         document.fonts.ready.then(() => {
 
@@ -141,17 +144,25 @@ document.addEventListener("DOMContentLoaded", () => {
             titleH1.offsetHeight;
 
             let tl = gsap.timeline();
-            let words = split.words;
+            // let words = split.words;
+
+            // gsap.set(titleH1, {
+            //     y: 100,
+            // })
+
 
             tl.to(titleH1, {
-                // y: 0,
+                y: 0,
                 autoAlpha: 1,
-                duration: 0.1
+                duration: 0.1,
+
+                ease: "power2.out",
             })
                 .to(titleContainer, {
                     // y: 0,
                     autoAlpha: 1,
                     duration: 3,
+
                     ease: "power2.out",
                 })
                 // .from(words, {
