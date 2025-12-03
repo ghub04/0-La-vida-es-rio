@@ -1,6 +1,5 @@
 import { quoteLoad } from "./quoteLoad.js";
 import "./coords.js";
-// import "./aboutLoad.js"
 import "./draggable.js"
 import "./cursor.js"
 import "./loaderAnim.js"

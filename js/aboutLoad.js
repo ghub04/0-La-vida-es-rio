@@ -1,3 +1,6 @@
+console.log('about load')
+
+
 const aboutWrapper = document.querySelector('.about-wrapper')
 // const aboutContainer = document.querySelector('.about-info')
 let aboutContainer
