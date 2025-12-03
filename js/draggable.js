@@ -128,6 +128,7 @@
 // import { Draggable } from "gsap/Draggable";
 
 gsap.registerPlugin(Draggable);
+gsap.registerPlugin(InertiaPlugin)
 
 const map = document.querySelector('#map');
 const mapOverlay = document.querySelector('.map-overlay');
@@ -144,14 +145,36 @@ export let moved = false;
 
 // 1. DRAGGABLE
 // ------------------------------
+// const draggableInstance = Draggable.create(map, {
+//     type: "x,y",
+//     edgeResistance: 0.65,
+//     inertia: true,
+
+//     // Importante: Al arrastrar, actualizamos el overlay
+//     onDrag: updateOverlay,
+//     onThrowUpdate: updateOverlay,
+
+//     onPress: () => { moved = false; },
+//     onDragStart: () => { moved = true; }
+// })[0];
 const draggableInstance = Draggable.create(map, {
     type: "x,y",
-    edgeResistance: 0.65,
+    edgeResistance: 0.65, // Resistencia al arrastrar contra el borde
+
+    // --- AQUÍ ESTÁ LA MAGIA DE LA INERCIA ---
     inertia: true,
 
-    // Importante: Al arrastrar, actualizamos el overlay
+    // Cuanto mayor sea el número, más rápido frena.
+    // 1000 = Desliza mucho (como hielo)
+    // 3000 = Frena moderado (natural)
+    // 5000 = Frena rápido (inercia muy corta)
+    resistance: 5000,
+
+    // Opcional: Para evitar que la inercia lo saque mucho de los límites
+    overshootTolerance: 0,
+
     onDrag: updateOverlay,
-    onThrowUpdate: updateOverlay,
+    onThrowUpdate: updateOverlay, // Importante para que el overlay siga al mapa durante la inercia
 
     onPress: () => { moved = false; },
     onDragStart: () => { moved = true; }
