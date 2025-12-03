@@ -90,9 +90,6 @@ body {
 }
 
 
-
-
-
 .container {
   display: flex;
   align-items: center;
@@ -152,9 +149,7 @@ body {
 }
 
 .audio-btn:hover {
-  /* padding: 1rem; */
   border-radius: 50%;
-  /* cursor: pointer; */
   outline-offset: 1rem;
   outline: 2px solid var(--sand);
   color: var(--sand)
@@ -189,11 +184,9 @@ Big-Desktop ==>1600px */
     max-width: 720px;
     height: auto;
     padding: 2rem;
-    /* justify-content: center; */
     position: absolute;
     bottom: 10%;
     right: 10%;
-    /* transform: translate(-50%, -50%); */
   }
 
   .quote-container {

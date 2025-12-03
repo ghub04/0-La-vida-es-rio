@@ -21,7 +21,7 @@ El proyecto está organizado en módulos para facilitar la escalabilidad y el ma
 
 ## Control de versiones
 
-Este repositorio es **privado** y se utiliza como entorno de trabajo y seguimiento del desarrollo.
+Este repositorio se utiliza como entorno de trabajo y seguimiento del desarrollo.
 Cada commit documenta una fase o ajuste del proyecto, incluyendo optimización de estilos, pruebas y mejoras, también mejoras según el feedback recibido en clase.
 
 
