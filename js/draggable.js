@@ -168,7 +168,7 @@ const draggableInstance = Draggable.create(map, {
     // 1000 = Desliza mucho (como hielo)
     // 3000 = Frena moderado (natural)
     // 5000 = Frena rápido (inercia muy corta)
-    resistance: 5000,
+    resistance: 3000,
 
     // Opcional: Para evitar que la inercia lo saque mucho de los límites
     overshootTolerance: 0,
