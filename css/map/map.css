@@ -26,7 +26,7 @@
   height: 100svh;
   overflow: hidden;
   /* filter: url(#noise); */
-  -webkit-filter: url(https://ghub04.github.io/0-La-vida-es-rio/index.html#noise);
+  filter: url(https://ghub04.github.io/0-La-vida-es-rio/index.html#noise);
   pointer-events: none;
 }
 
