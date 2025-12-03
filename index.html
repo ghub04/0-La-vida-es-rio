@@ -11,6 +11,15 @@
 </head>
 
 <body>
+  <!-- filtros -->
+  <svg class="filter">
+    <filter id="noise">
+      <feTurbulence baseFrequency=".8" xresult="colorNoise" />
+      <feColorMatrix in="colorNoise" type="matrix" values=".33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 1 0"
+        result="monoNoise" />
+      <feBlend in="SourceGraphic" in2="monoNoise" mode="multiply" />
+    </filter>
+  </svg>
   <!-- cursor -->
   <div class="cursor"></div>
   <!-- loader -->
@@ -183,14 +192,7 @@
     </filter>
   </svg>
 
-  <svg class="filter">
-    <filter id="noise">
-      <feTurbulence baseFrequency=".8" xresult="colorNoise" />
-      <feColorMatrix in="colorNoise" type="matrix" values=".33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 1 0"
-        result="monoNoise" />
-      <feBlend in="SourceGraphic" in2="monoNoise" mode="multiply" />
-    </filter>
-  </svg>
+
 
   <!-- <svg class="filter">
     <filter id="ocean-texture">
