@@ -1,7 +1,6 @@
 import { getAudio } from './timelineCover.js'
 import { moved } from './draggable.js';
 
-console.log(getAudio())
 
 const islands = document.querySelectorAll(".island-item");
 const container = document.querySelector(".quote-container");

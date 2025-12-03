@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // console.log("init timeline cover");
   gsap.registerPlugin(SplitText);
   gsap.registerPlugin(DrawSVGPlugin)
-  console.log('drawsvg')
+
 
   const borders = document.querySelector('.border-container')
 

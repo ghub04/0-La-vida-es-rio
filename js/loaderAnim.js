@@ -22,13 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let tlCover = gsap.timeline()
 
-    // 1) Mostrar el SVG (estaba a opacity 0)
-    // gsap.to(mapSvg, {
-    //     autoAlpha: 1,
-    //     duration: 0.5,
-    //     delay: 0.3
-    // });
-
 
     // 2) Preparar el trazo del mapa
     gsap.set(svgPath, {
@@ -96,14 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         closeCover.addEventListener("click", () => {
-            // console.log("close");
             hideCover();
-            // mapText();
 
-            // if (!isAudioOn) {
-            //     audio.play()
-            //     isAudioOn = true
-            // }
         });
     }
     // closeCoverAnim()
@@ -157,22 +144,22 @@ document.addEventListener("DOMContentLoaded", () => {
             let words = split.words;
 
             tl.to(titleH1, {
-                y: 0,
+                // y: 0,
                 autoAlpha: 1,
                 duration: 0.1
             })
                 .to(titleContainer, {
-                    y: 0,
+                    // y: 0,
                     autoAlpha: 1,
                     duration: 3,
                     ease: "power2.out",
                 })
-                .from(words, {
-                    y: 100,
-                    duration: 3,
-                    stagger: 0.05,
-                    ease: "power2.out"
-                }, '<')
+                // .from(words, {
+                //     y: 100,
+                //     duration: 3,
+                //     stagger: 0.05,
+                //     ease: "power2.out"
+                // }, '<')
 
                 .to(displacementMap, {
                     attr: { baseFrequency: 0.006 },
